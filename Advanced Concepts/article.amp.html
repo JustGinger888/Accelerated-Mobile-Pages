@@ -55,9 +55,13 @@
       amp-fit-text {
         white-space: normal;
       }
+
+      .home-button {
+        float: left;
+      }
     </style>
 
-    
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
     <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
@@ -101,6 +105,10 @@
 
   <body>
     <header>
+      <a href="article.amp.html">
+        <amp-img class="home-button" src="assets/icons/home.png" width="36" height="36"></amp-img>
+      </a>
+        
       News Site
     </header>
 
@@ -132,11 +140,23 @@
 
       <!--Carousel-->
       <div>
-        <amp-carousel layout="responsive" width="300" height="168" type="slides" autoplay delay="8000" transition="5000" loop>
+        <amp-carousel layout="responsive" width="300" height="168" type="slides" autoplay delay="8000" loop>
           <amp-img src="assets/mountains-1.jpg" width="300" height="168" layout="responsive"></amp-img>
           <amp-img src="assets/mountains-2.jpg" width="300" height="168" layout="responsive"></amp-img>
           <amp-img src="assets/mountains-3.jpg" width="300" height="168" layout="responsive"></amp-img>
         </amp-carousel>
+        <br/>
+        <amp-carousel layout="responsive" width= 300 height="168" type="slides" autoplay delay="8000" loop>
+          <amp-img src="assets/mountains-1.jpg" width="300" height="168" layout="responsive"></amp-img>
+      
+          <amp-ad width="300" height="168" type="doubleclick" data-slot="/35096353/amptesting/image/static" layout="responsive">
+              <div placeholder>This advert is still loading.</div>
+          </amp-ad>
+      
+          <amp-fit-text width="300" height="168" layout="responsive">
+              Big, bold article quote goes here.
+          </amp-fit-text>
+      </amp-carousel>
       </div>
       <!--Carousel-->
 
@@ -185,6 +205,38 @@
         </amp-ad>
       </div>
       <!--Ads-->
+
+      <!--Analytics-->
+      <div>
+        <amp-analytics type="googleanalytics">
+          <script type="application/json">
+          {
+            "vars": {
+              "account": "UA-YYYY-Y"
+            },
+            "triggers": {
+              "default pageview": {
+                "on": "visible",
+                "request": "pageview",
+                "vars": {
+                  "title": "Name of the Article"
+                }
+              },
+              "click on #header trigger": {
+                "on": "click",
+                "selector": "#header",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "examples",
+                  "eventAction": "clicked-header"
+                }
+              }
+            }
+          }
+          </script>
+        </amp-analytics>
+      </div>
+      <!--Analytics-->
     </article>
 
   </body>
