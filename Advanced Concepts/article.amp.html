@@ -88,16 +88,45 @@
     }
     </script>
   </head>
+
   <body>
     <header>
       News Site
     </header>
+
     <article>
       <h1>Article Name</h1>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
 
-      <amp-img src="assets/mountains.jpg" layout="responsive" width="266" height="150"></amp-img>
+      <amp-img 
+        src="assets/mountains.jpg" 
+        layout="responsive" 
+        width="266" 
+        height="150">
+      </amp-img>
+
     </article>
+
+    <!--Ads-->
+    <div>
+      <amp-ad
+        width="300"
+        height="250"
+        type="doubleclick"
+        data-slot="/35096353/amptesting/geo/uk">
+        <div fallback>No ad appeared because you're not browsing from the UK!</div>
+      </amp-ad>
+
+      <amp-ad
+        width="300"
+        height="250"
+        type="doubleclick"
+        data-slot="/35096353/amptesting/geo/us">
+        <div fallback>No ad appeared because you're not browsing from the US!</div>
+      </amp-ad>
+    </div>
+    <!--Ads-->
+
   </body>
 </html>
