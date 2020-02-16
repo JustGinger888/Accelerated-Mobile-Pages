@@ -20,6 +20,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="canonical" href="/article.html">
     <link rel="shortcut icon" href="assets/amp_favicon.png">
 
@@ -31,6 +32,7 @@
         width: auto;
         margin: 0;
         padding: 0;
+        font-family: 'Raleway', sans-serif;
       }
 
       header {
@@ -59,8 +61,20 @@
       .home-button {
         float: left;
       }
-    </style>
 
+      .sub-menu {
+        background: black;
+      }
+
+      .sub-menu a {
+        display: block;
+        background: tomato;
+        margin: 5px;
+        padding: 5px;
+        color: white;
+        text-decoration: none;
+      }
+    </style>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
@@ -111,6 +125,19 @@
         
       News Site
     </header>
+
+    <!--Sub Menu-->
+    <div class="sub-menu">
+      <amp-carousel layout="fixed-height" height="38" type="carousel">
+        <a href="#example1">Example 1</a>
+        <a href="#example2">Example 2</a>
+        <a href="#example3">Longer Named Example 3</a>
+        <a href="#example4">Example 4</a>
+        <a href="#example5">Example 5</a>
+        <a href="#example6">Example 6</a>
+      </amp-carousel>
+    </div>
+    <!--Sub Menu-->
 
     <article>
       <h1>Article Name</h1>
