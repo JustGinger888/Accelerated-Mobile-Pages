@@ -52,6 +52,10 @@
         margin: 0.5em;
       }
     </style>
+    
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script type="application/ld+json">
     {
@@ -105,28 +109,52 @@
         width="266" 
         height="150">
       </amp-img>
+    
+      <!--Tweet-->
+      <div>
+        <amp-twitter
+          width="486"
+          height="657"
+          layout="responsive"
+          data-tweetid="638793490521001985">
+        </amp-twitter>
+      </div>
+      <!--Tweet-->
 
+      <!-- Vidoes -->
+      <div>
+        <amp-youtube
+          data-videoid="mGENRKrdoGY"
+          layout="responsive"
+          width="480"
+          height="270">
+          <div fallback>
+            <p>The video could not be loaded.</p>
+          </div>
+        </amp-youtube>
+      </div>
+      <!-- Videos-->
+
+      <!--Ads-->
+      <div>
+        <amp-ad
+          width="300"
+          height="250"
+          type="doubleclick"
+          data-slot="/35096353/amptesting/geo/us">
+          <div fallback>No ad appeared because you're not browsing from the US!</div>
+        </amp-ad>
+
+        <amp-ad
+          width="300"
+          height="250"
+          type="doubleclick"
+          data-slot="/35096353/amptesting/geo/uk">
+          <div fallback>No ad appeared because you're not browsing from the UK!</div>
+        </amp-ad>
+      </div>
+      <!--Ads-->
     </article>
-
-    <!--Ads-->
-    <div>
-      <amp-ad
-        width="300"
-        height="250"
-        type="doubleclick"
-        data-slot="/35096353/amptesting/geo/uk">
-        <div fallback>No ad appeared because you're not browsing from the UK!</div>
-      </amp-ad>
-
-      <amp-ad
-        width="300"
-        height="250"
-        type="doubleclick"
-        data-slot="/35096353/amptesting/geo/us">
-        <div fallback>No ad appeared because you're not browsing from the US!</div>
-      </amp-ad>
-    </div>
-    <!--Ads-->
 
   </body>
 </html>
